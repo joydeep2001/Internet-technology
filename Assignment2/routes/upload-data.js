@@ -8,7 +8,7 @@ const storage = multer.diskStorage({
     return cb(null, "./uploads");
   },
   filename: function (req, file, cb) {
-    const filePath = "/home/joy/Documents/ws/asg/Internet-technology/Assignment2/data-history.json";
+    const filePath = path.resolve(__dirname, "..") + "/data-history.json";
     var obj;
     const fname = `${Date.now()}-${file.originalname}` ;
     console.log(fname)

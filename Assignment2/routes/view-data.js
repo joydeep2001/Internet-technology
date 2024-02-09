@@ -1,12 +1,13 @@
 const router = require("express").Router();
 const fs = require("fs");
 const { constrainedMemory } = require("process");
+const path = require('path');
 
-function myPromise() {}
+
 
 router.get("/", async (req, res) => {
-
-  const filePath = "/home/joy/Documents/ws/asg/Internet-technology/Assignment2/data-history.json";
+  
+  const filePath = path.resolve(__dirname, "..") + "/data-history.json";
   let obj;
 
   try {
