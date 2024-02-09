@@ -8,11 +8,6 @@ let PORT = 3000
 app.set('view engine','ejs');
 
 
-app.use(express.json({ limit: '50mb' })); // Adjust the limit as needed
-
-// Middleware to handle URL-encoded data with size limit
-app.use(express.urlencoded({ extended: true, limit: '50mb' })); // Adjust the limit as needed
-
 //Import Routes
 const homepage = require('./routes/home-page')
 const upload = require('./routes/upload-data')
